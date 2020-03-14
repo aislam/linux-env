@@ -1,0 +1,36 @@
+export PATH=$PATH:/home/aislam/bin
+source ~/bin/linux-env/git-prompt
+function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
+alias open='xdg-open'
+
+# (12:27 PM) aislam@srabon:~/src/linux-env(master)$
+# Green time in 12 hour \@
+# Green username \u
+# Green host \h
+# White :
+# Blue path \W
+# Yellow git branch info from script
+# White $
+# This is the prompt used before the current one
+# PS1="\[\033[00;32m\](\@) \u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00;33m\]\$(parse_git_branch_or_tag)\[\033[00m\]$ "
+
+# (20:27) aislam@srabon:~/src/linux-env(master)$
+# Green time in 24 hour \A
+# Green username \u
+# Green host \h
+# White :
+# Blue path \W
+# Yellow git branch info from script
+# White $
+# PS1="\[\033[00;32m\](\A) \u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00;33m\]\$(parse_git_branch_or_tag)\[\033[00m\]$ "
+
+# 256 color terminal prompts
+# Color codes: https://unix.stackexchange.com/questions/124407/what-color-codes-can-i-use-in-my-ps1-prompt
+# Examples:
+# PS1="`EXT_COLOR 172`[\u@\h \W]\$${NO_COLOUR} "
+#
+# Orange:
+# PS1="`EXT_COLOR 166`(\A) \u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00;33m\]\$(parse_git_branch_or_tag)\[\033[00m\]$ "
+#
+# Light green (current color scheme):
+# PS1="`EXT_COLOR 041`(\A) \u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00;33m\]\$(parse_git_branch_or_tag)\[\033[00m\]$ "

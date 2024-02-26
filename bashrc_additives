@@ -1,6 +1,18 @@
+# Bash history related
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+export HISTTIMEFORMAT="[%F %T] "
+export HISTFILE=/home/aislam/.bash_eternal_history
+export HISTIGNORE="clear:ll:ls:exit:pwd:history"
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Prompt
 export PATH=$PATH:/home/aislam/bin
-source ~/bin/linux-env/git-prompt
+source ~/src/linuxenv/git-prompt
 function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
+PS1="`EXT_COLOR 41`(\A) \u@\h\[\033[00m\]:\[\033[00;36m\]\w\[\033[00;33m\]\$(parse_git_branch_or_tag)\[\033[00m\]$ "
+
+# Aliases
 alias open='xdg-open'
 
 # (12:27 PM) aislam@srabon:~/src/linux-env(master)$
